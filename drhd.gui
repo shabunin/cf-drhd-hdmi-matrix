@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gui>
+  <properties>
+    <project>drhd-matrix</project>
+    <designer>Vladimir Shabunin</designer>
+    <size autoposition="scale">
+      <portrait width="768" height="1024" />
+      <landscape width="1024" height="768" />
+    </size>
+    <autoposition />
+    <imagefolder>RES</imagefolder>
+    <debug loaderrors="0" connectionerrors="0" />
+    <devices>
+      <device name="Sony C5503 ZR Vladimir">3C607F2B484A6E4FD9F81BDF47F8028A</device>
+      <device name="iPad new 22">D782FCE451BD67813198C6EFB061CF7E</device>
+      <device name="Sony LT25i">15DCDE3D3B63FA8BE1DBE3E52848A155</device>
+      <device name="iPad Dmitriy">69E32DB061C09965437E713E269B7FB8</device>
+      <device name="iPad tommy">298F02C2C219D67FB45A344BD524A85D</device>
+    </devices>
+  </properties>
+  <systems>
+    <system name="DrHD" protocol="tcp" accept="0" ip="192.168.1.54" port="4999" origin="0" alwayson="1" idleTimeout="0" dialogTimeout="0" heartbeatMode="-1" heartbeatRx="" heartbeatTx="" textEncoding="" eom="" js="" connectionStatus="0" disconnectionStatus="0" startupCmd="" startupMacro="" offlinequeue="1" ssl="0">
+      <fb name="DrHDFeedBack" regex=".*" />
+    </system>
+  </systems>
+  <themes>
+    <theme type="background" name=".win8_absctract"><![CDATA[ background-image: url(windows-8-hd-wallpaper.jpg); background-repeat: no-repeat;]]></theme>
+    <theme type="button" name=".btn_blue_sq_lrg[state='0']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(btn_colors\btn_blue_sq_lrg_off.png); color: White; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+    <theme type="button" name=".btn_blue_sq_lrg[state='1']"><![CDATA[padding: 0px 0px 0px 0px; background-image: url(btn_colors\btn_blue_sq_lrg_on.png); color: White; font-size: 12px; font-family: 'Verdana'; font-weight: normal; font-style: none; text-decoration: none; text-align: center; vertical-align: middle; display: table-cell; box-sizing: border-box; -webkit-box-sizing: border-box; -webkit-tap-highlight-color:rgba(0,0,0,0);]]></theme>
+  </themes>
+  <scripts>
+    <script name="dr_hd_matrix.js" />
+    <script name="userMain.js" />
+  </scripts>
+  <page name="Startup" j="0" tags="" transition="None" subtype="None" time="0" ease="" start="1">
+    <portrait />
+    <landscape t="win8_absctract">
+      <btn j="0" x="122" y="46" w="151" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="" js="myMatrix.getStatus()">
+        <inactive s="0">GET STATUS</inactive>
+        <active s="0">GET STATUS</active>
+      </btn>
+      <btn j="0" x="109" y="228" w="84" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="" js="myMatrix.powerOut(3, 'ON')">
+        <inactive s="0">ON 03</inactive>
+        <active s="0">ON 03</active>
+      </btn>
+      <btn j="0" x="368" y="228" w="84" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="">
+        <inactive s="1">
+        </inactive>
+        <active s="1">
+        </active>
+      </btn>
+      <btn j="0" x="481" y="231" w="84" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="">
+        <inactive s="2">
+        </inactive>
+        <active s="2">
+        </active>
+      </btn>
+      <btn j="0" x="577" y="228" w="84" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="">
+        <inactive s="3">
+        </inactive>
+        <active s="3">
+        </active>
+      </btn>
+      <btn j="0" x="690" y="231" w="84" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="">
+        <inactive s="4">
+        </inactive>
+        <active s="4">
+        </active>
+      </btn>
+      <btn j="0" x="366" y="326" w="84" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="">
+        <inactive s="5">
+        </inactive>
+        <active s="5">
+        </active>
+      </btn>
+      <btn j="0" x="479" y="329" w="84" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="">
+        <inactive s="6">
+        </inactive>
+        <active s="6">
+        </active>
+      </btn>
+      <btn j="0" x="575" y="326" w="84" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="">
+        <inactive s="7">
+        </inactive>
+        <active s="7">
+        </active>
+      </btn>
+      <btn j="0" x="688" y="329" w="84" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="">
+        <inactive s="8">
+        </inactive>
+        <active s="8">
+        </active>
+      </btn>
+      <btn j="0" x="109" y="316" w="84" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="" js="myMatrix.powerOut(3, 'OFF')">
+        <inactive s="0">OFF 03</inactive>
+        <active s="0">OFF 03</active>
+      </btn>
+      <btn j="0" x="210" y="226" w="84" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="" js="myMatrix.assignOut(3, 6)">
+        <inactive s="0">3 FR 6</inactive>
+        <active s="0">3 FR 6</active>
+      </btn>
+      <btn j="0" x="209" y="320" w="84" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="" js="myMatrix.assignOut(3, 4)">
+        <inactive s="0">3 FR 4</inactive>
+        <active s="0">3 FR 4</active>
+      </btn>
+      <btn j="0" x="109" y="446" w="84" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="" js="myMatrix.defaultEDID(3, 5)">
+        <inactive s="0">EDID 3 5</inactive>
+        <active s="0">EDID 3 5</active>
+      </btn>
+      <btn j="0" x="209" y="450" w="103" h="84" t="btn_blue_sq_lrg" flip="None" sim="1" l="0" s="1" tags="" js="myMatrix.copyEDID(3, 4)">
+        <inactive s="0">EDID CP 3 4</inactive>
+        <active s="0">EDID CP 3 4</active>
+      </btn>
+    </landscape>
+  </page>
+</gui>
